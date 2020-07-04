@@ -1,4 +1,5 @@
 $(function () {
+
     //二维码动画
     $("#qrcodeA").hover(
         function () {

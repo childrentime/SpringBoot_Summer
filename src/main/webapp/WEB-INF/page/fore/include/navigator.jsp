@@ -1,8 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
-
-<%--<link rel="stylesheet" href="${pageContext.request.contextPath}/res/css/fore/fore_nav.css"/>--%>
-<link rel="stylesheet" href="${pageContext.request.contextPath}/src/main/webapp/res/css/fore/fore_nav.css"/>
-<script src="${pageContext.request.contextPath}/src/main/webapp/res/js/jquery-1.11.3.min.js"></script>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/res/css/fore/fore_nav.css"/>
 <%--弹出按钮的script实现--%>
 <script>
     $(function () {
@@ -41,7 +38,7 @@
         <ul class="quick_li">
             <li class="quick_li_MyTaobao">
                 <div class="sn_menu">
-                   <a href="${pageContext.request.contextPath}/userDetails">我的淘宝<b></b></a>
+                    <a href="${pageContext.request.contextPath}/userDetails">我的淘宝<b></b></a>
                     <div class="quick_menu">
                         <a href="${pageContext.request.contextPath}/order/0/10">已买到的宝贝</a>
                         <a href="#">已卖出的宝贝</a>
@@ -49,7 +46,7 @@
                 </div>
             </li>
             <li class="quick_li_cart">
-                <img src="${pageContext.request.contextPath}/src/main/webapp/res/images/fore/WebsiteImage/buyCar.png">
+                <img src="${pageContext.request.contextPath}/res/images/fore/WebsiteImage/buyCar.png">
                 <a href="${pageContext.request.contextPath}/cart">购物车</a>
             </li>
             <li class="quick_li_menuItem">
@@ -63,10 +60,10 @@
             </li>
             <li class="quick_li_separator"></li>
             <li class="quick_li_mobile">
-                <img src="${pageContext.request.contextPath}/src/main/webapp/res/images/fore/WebsiteImage/mobile.png">
+                <img src="${pageContext.request.contextPath}/res/images/fore/WebsiteImage/mobile.png">
                 <a href="https://pages.tmall.com/wow/portal/act/app-download?spm=875.7931836/B.a2226mz.11.661442654wQ0MF&scm=1027.1.1.1" title="天猫无线">手机版</a>
                 <div class="quick_qrcode">
-                    <img src="${pageContext.request.contextPath}/src/main/webapp/res/images/fore/WebsiteImage/qrcode.png">
+                    <img src="${pageContext.request.contextPath}/res/images/fore/WebsiteImage/qrcode.png">
                     <b></b>
                 </div>
             </li>

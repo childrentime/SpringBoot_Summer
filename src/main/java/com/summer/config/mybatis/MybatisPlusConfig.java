@@ -15,7 +15,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 spring-boot 会自动配置事务，相关的配置在 org.springframework.boot.autoconfigure.transaction.TransactionAutoConfiguration
  */
 @Configuration //@Configuration标注在类上，相当于把该类作为spring的xml配置文件中的，作用为：配置spring容器(应用上下文)
-@MapperScan({"com.xq.tmall.dao*"})//@MapperScan，直接将mapper所在的目录扫描进去
+@MapperScan({"com.summer.dao*"})//@MapperScan，直接将mapper所在的目录扫描进去
 public class MybatisPlusConfig {
 
     /**

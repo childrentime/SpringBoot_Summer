@@ -1,5 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
-<link rel="stylesheet" href="${pageContext.request.contextPath}/src/main/webapp/res/css/fore/fore_foot_two.css"/>
+<link rel="stylesheet" href="${pageContext.request.contextPath}/res/css/fore/fore_foot_two.css"/>
 <div class="banner_footer">
     <div class="tmall-ensure">
         <a href="http://pages.tmall.com/wow/seller/act/newpinzhibaozhang"></a>
@@ -44,7 +44,7 @@
         <dl>
             <dt>手机天猫</dt>
             <dd><a href="http://mobile.tmall.com/?spm=875.7931836/B.a2226n1.23.71ca4265hUvhyq" class="join"><img
-                    src="${pageContext.request.contextPath}/src/main/webapp/res/images/fore/WebsiteImage/TB14VZKHXXXXXcAXXXX64VRZFXX-105-105.png"
+                    src="${pageContext.request.contextPath}/res/images/fore/WebsiteImage/TB14VZKHXXXXXcAXXXX64VRZFXX-105-105.png"
                     width="105" height="105" alt="手机天猫"></a>
             </dd>
         </dl>
