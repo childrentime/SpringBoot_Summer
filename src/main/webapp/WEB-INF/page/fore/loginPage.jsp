@@ -65,7 +65,7 @@
                     <input type="password" name="password" id="password" class="loginInput">
                 </div>
                     <%--验证码--%>
-                 <div class="loginInputDiv">
+                    <div class="loginInputDiv">
                      <img src="${pageContext.request.contextPath}/code/imgCode ">
                      <br>
                      <input type="text" name="checkCode" id="checkCode" class="loginInput" placeholder="请输入验证码">

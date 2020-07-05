@@ -23,7 +23,7 @@ public class ForeLoginController extends BaseController {
     private UserService userService;
 
     //转到前台天猫-登录页
-    @RequestMapping(value = "login", method = RequestMethod.GET)
+    @RequestMapping(value = "login", method = {RequestMethod.POST, RequestMethod.GET})
     public String goToPage(HttpSession session, Map<String, Object> map) {
         logger.info("转到前台天猫-登录页");
         return "fore/loginPage";
@@ -53,6 +53,27 @@ public class ForeLoginController extends BaseController {
         }
         return jsonObject.toJSONString();
     }
+
+    @ResponseBody
+    @RequestMapping(value = "login/checkCode", method = RequestMethod.POST, produces = "application/json;charset=utf-8")
+    public String checkCode(HttpSession session, @RequestParam String code)
+    {
+        logger.info("人工验证");
+        JSONObject jsonObject = new JSONObject();
+        String validationCode=session.getAttribute("validationCode").toString();
+        if(code.equals(validationCode))
+        {
+            logger.info("人工验证成功");
+            jsonObject.put("success", true);
+        }
+        else
+        {
+            logger.info("登录验证失败");
+            jsonObject.put("success", false); //键值对储存
+        }
+        return jsonObject.toJSONString();
+    }
+
 
     //退出当前账号
     @RequestMapping(value = "login/logout", method = RequestMethod.GET)

@@ -104,6 +104,7 @@ public class ValidationCodeAction {
         // 取得验证码字符串放入Session
         String validationCode = captcha.getChallenge();
         session.setAttribute("validationCode", validationCode);
+        System.out.println(validationCode);
         // 取得验证码图片并输出
         BufferedImage bufferedImage = captcha.getImage();
         ImageIO.write(bufferedImage, "png", outputStream);
