@@ -36,13 +36,36 @@ $(function () {
     //登录验证
     $(".loginForm").submit(function () {
         var yn = true;
-        $(this).find(":text,:password").each(function () {
+        $(this).find(":password").each(function () {
             if ($.trim($(this).val()) === "") {
-                styleUtil.errorShow($("#error_message_p"), "请输入用户名和密码！");
+                styleUtil.errorShow($("#error_message_p"), "请输入密码！");
                 yn = false;
                 return yn;
             }
         });
+        $(this).find("#name").each(function () {
+            if ($.trim($(this).val()) === "") {
+                styleUtil.errorShow($("#error_message_p"), "请输入用户名！");
+                yn = false;
+                return yn;
+            }
+        });
+        $(this).find("#checkCode").each(function () {
+            if ($.trim($(this).val()) === "") {
+                styleUtil.errorShow($("#error_message_p"), "请输入验证码！");
+                yn = false;
+                return yn;
+            }
+        });
+        $(this).find("#checkCode").each(function () {
+            if ($.trim($(this).val()) !== $(this).getAttribute("validationCode")) {
+                styleUtil.errorShow($("#error_message_p"), "验证码输入错误！");
+                yn = false;
+                return yn;
+            }
+        });
+
+
         if (yn) {
             $.ajax({
                 type: "POST",

@@ -3,13 +3,6 @@
 <head>
     <script src="${pageContext.request.contextPath}/res/js/fore/fore_login.js"></script>
     <link href="${pageContext.request.contextPath}/res/css/fore/fore_login.css" rel="stylesheet">
-    <script>
-        function reloadCode()
-    {
-        var time=new Date().getTime();
-        document.getElementById("imagecode").src="${pageContext.request.contextPath}/servlet/ImageServlet?d="+time;
-    }
-    </script>
     <style rel="stylesheet">
         #baseNavigator {
             padding: 22px 0;
@@ -72,6 +65,11 @@
                     <input type="password" name="password" id="password" class="loginInput">
                 </div>
                     <%--验证码--%>
+                 <div class="loginInputDiv">
+                     <img src="${pageContext.request.contextPath}/code/imgCode ">
+                     <br>
+                     <input type="text" name="checkCode" id="checkCode" class="loginInput" placeholder="请输入验证码">
+                 </div>
                     <%--登录按钮--%>
                 <input type="submit" class="loginButton" value="登 录">
             </form>
