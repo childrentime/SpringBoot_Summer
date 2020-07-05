@@ -2,23 +2,23 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "mybatis-3-mapper.dtd">
-<mapper namespace="com.xq.tmall.dao.ReviewMapper">
-    <resultMap id="reviewMap" type="com.xq.tmall.entity.Review">
+<mapper namespace="com.summer.dao.ReviewMapper">
+    <resultMap id="reviewMap" type="com.summer.entity.Review">
         <id column="review_id" property="review_id"/>
         <result column="review_content" property="review_content"/>
         <result column="review_createDate" property="review_createDate"/>
-        <association property="review_user" javaType="com.xq.tmall.entity.User">
+        <association property="review_user" javaType="com.summer.entity.User">
             <id property="user_id" column="review_user_id"/>
         </association>
-        <association property="review_product" javaType="com.xq.tmall.entity.Product">
+        <association property="review_product" javaType="com.summer.entity.Product">
             <id property="product_id" column="review_product_id"/>
         </association>
-        <association property="review_orderItem" javaType="com.xq.tmall.entity.ProductOrderItem">
+        <association property="review_orderItem" javaType="com.summer.entity.ProductOrderItem">
             <id property="productOrderItem_id" column="review_orderItem_id"/>
         </association>
     </resultMap>
 
-    <insert id="insertOne" parameterType="com.xq.tmall.entity.Review">
+    <insert id="insertOne" parameterType="com.summer.entity.Review">
         INSERT review (review_id,review_content,review_createDate,review_user_id,review_product_id,review_orderItem_id)
             VALUES (
             null,
@@ -28,7 +28,7 @@
         #{review.review_product.product_id},
         #{review.review_orderItem.productOrderItem_id})
     </insert>
-    <update id="updateOne" parameterType="com.xq.tmall.entity.Review">
+    <update id="updateOne" parameterType="com.summer.entity.Review">
         UPDATE review
         <set>
             <if test="review.review_content != null">review_content = #{review.review_content},</if>

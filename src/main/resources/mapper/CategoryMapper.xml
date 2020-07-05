@@ -2,15 +2,15 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "mybatis-3-mapper.dtd">
-<mapper namespace="com.xq.tmall.dao.CategoryMapper">
-    <insert id="insertOne" parameterType="com.xq.tmall.entity.Category">
+<mapper namespace="com.summer.dao.CategoryMapper">
+    <insert id="insertOne" parameterType="com.summer.entity.Category">
         INSERT category (category_id,category_name,category_image_src)
             VALUES (
             null,
             #{category.category_name},
             #{category.category_image_src})
     </insert>
-    <update id="updateOne" parameterType="com.xq.tmall.entity.Category">
+    <update id="updateOne" parameterType="com.summer.entity.Category">
         UPDATE category
         <set>
             <if test="category.category_name != null">category_name = #{category.category_name},</if>
@@ -20,7 +20,7 @@
             category_id = #{category.category_id}
         </where>
     </update>
-    <select id="select" resultType="com.xq.tmall.entity.Category">
+    <select id="select" resultType="com.summer.entity.Category">
         SELECT category_id,category_name,category_image_src FROM category
         <where>
             <if test="category_name != null">category_name LIKE concat('%',#{category_name},'%')</if>
@@ -29,7 +29,7 @@
             LIMIT #{pageUtil.pageStart},#{pageUtil.count}
         </if>
     </select>
-    <select id="selectOne" parameterType="int" resultType="com.xq.tmall.entity.Category">
+    <select id="selectOne" parameterType="int" resultType="com.summer.entity.Category">
         SELECT category_id,category_name,category_image_src FROM category
         <where>
             category_id = #{category_id}

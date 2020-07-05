@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "mybatis-3-mapper.dtd">
-<mapper namespace="com.xq.tmall.dao.ProductMapper">
+<mapper namespace="com.summer.dao.ProductMapper">
     <resultMap id="productMap" type="product">
         <id property="product_id" column="product_id"/>
         <result property="product_name" column="product_name"/>
@@ -11,7 +11,7 @@
         <result property="product_sale_price" column="product_sale_price"/>
         <result property="product_create_date" column="product_create_date"/>
         <result property="product_isEnabled" column="product_isEnabled"/>
-        <association property="product_category" javaType="com.xq.tmall.entity.Category">
+        <association property="product_category" javaType="com.summer.entity.Category">
             <id property="category_id" column="product_category_id"/>
         </association>
     </resultMap>
@@ -127,7 +127,7 @@
             product_id = #{product_id}
         </where>
     </select>
-    <select id="selectTitle" resultType="com.xq.tmall.entity.Product">
+    <select id="selectTitle" resultType="com.summer.entity.Product">
         SELECT product_id,product_title FROM product
         <where>
             <if test="product != null">
