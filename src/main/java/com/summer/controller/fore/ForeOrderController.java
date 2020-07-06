@@ -37,6 +37,10 @@ public class ForeOrderController extends BaseController {
     private ProductImageService productImageService;
     @Autowired
     private ProductOrderService productOrderService;
+    @Autowired
+    private ReviewService reviewService;
+    @Autowired
+    private LastIDService lastIDService;
 
     //转到前台天猫-订单列表页
     @RequestMapping(value = "order", method = RequestMethod.GET)

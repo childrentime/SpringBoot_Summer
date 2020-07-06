@@ -35,6 +35,8 @@ public class ForeProductDetailsController extends BaseController {
     @Autowired
     private PropertyService propertyService;
     @Autowired
+    private ReviewService reviewService;
+    @Autowired
     private ProductOrderItemService productOrderItemService;
 
     //转到前台天猫-产品详情页
