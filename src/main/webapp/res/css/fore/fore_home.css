@@ -1,12 +1,11 @@
 nav {
-    /*设置下边框样式*/
     border-bottom: 2px solid #FF0036;
 }
 
 .header {
     width: 1270px;
     height: 130px;
-    /*间距 */margin: auto;
+    margin: auto;
 }
 
 .header > img {
@@ -17,19 +16,19 @@ nav {
 
 .header > .mallSearch {
     width: 625px;
-    /*设置上内边距*/padding-top: 38px;
-    /*图像浮动*/float: left;
+    padding-top: 38px;
+    float: left;
     padding-left: 110px;
 }
 
 .mallSearch > form {
-    /*设置红色边框*/ border: 2px solid #FF0036;
-    /*右边框样式*/border-right: 0;
+    border: 2px solid #FF0036;
+    border-right: 0;
 }
 
 .mallSearch .mallSearch-input {
     height: 36px;
-    /*图像的左侧和右侧均不允许出现浮动元素：*/clear: both;
+    clear: both;
 }
 
 .mallSearch-input > .header_search_input {
@@ -37,11 +36,11 @@ nav {
     height: 36px;
     width: 491px;
     font: 14px '宋体';
-    /*规定两个并排的带边框的框：*/ box-sizing: border-box;
-    /*设置 4 个边框的样式：*/outline: none;
+    box-sizing: border-box;
+    outline: none;
     color: #000;
     margin: 0;
-    /*设置p元素的内边距*/padding: 5px 3px 5px 5px;
+    padding: 5px 3px 5px 5px;
     vertical-align: middle;
     border: 0;
 }

@@ -65,7 +65,6 @@
 .quick_li > li {
     float: left;
     position: relative;
-    list-sytle:none;
 }
 
 .quick_li > li > a {
