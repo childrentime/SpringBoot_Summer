@@ -6,6 +6,7 @@ import com.summer.entity.Address;
 import com.summer.entity.User;
 import com.summer.service.AddressService;
 import com.summer.service.UserService;
+import com.summer.util.MD5Utils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -69,6 +70,7 @@ public class ForeRegisterController extends BaseController{
         User user = new User()
                 .setUser_name(user_name)
                 .setUser_nickname(user_nickname)
+               // .setUser_password(MD5Utils.code(user_password))
                 .setUser_password(user_password)
                 .setUser_gender(Byte.valueOf(user_gender))
                 .setUser_birthday(new SimpleDateFormat("yyyy-MM-dd").parse(user_birthday))
