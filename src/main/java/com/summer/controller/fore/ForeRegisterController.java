@@ -1,4 +1,5 @@
 package com.summer.controller.fore;
+import org.apache.commons.codec.digest.DigestUtils;
 
 import com.alibaba.fastjson.JSONObject;
 import com.summer.controller.BaseController;
@@ -70,8 +71,7 @@ public class ForeRegisterController extends BaseController{
         User user = new User()
                 .setUser_name(user_name)
                 .setUser_nickname(user_nickname)
-               // .setUser_password(MD5Utils.code(user_password))
-                .setUser_password(user_password)
+                .setUser_password(DigestUtils.sha1Hex(user_password))
                 .setUser_gender(Byte.valueOf(user_gender))
                 .setUser_birthday(new SimpleDateFormat("yyyy-MM-dd").parse(user_birthday))
                 .setUser_address(new Address().setAddress_areaId(user_address))

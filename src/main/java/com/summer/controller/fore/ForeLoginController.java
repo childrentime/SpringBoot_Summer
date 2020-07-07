@@ -4,6 +4,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.summer.controller.BaseController;
 import com.summer.entity.User;
 import com.summer.service.UserService;
+import org.apache.commons.codec.digest.DigestUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -40,7 +41,7 @@ public class ForeLoginController extends BaseController {
     @RequestMapping(value = "login/doLogin", method = RequestMethod.POST, produces = "application/json;charset=utf-8")
     public String checkLogin(HttpSession session, @RequestParam String username, @RequestParam String password) {
         logger.info("用户验证登录");
-        User user = userService.login(username, password);
+        User user = userService.login(username, DigestUtils.sha1Hex(password));
 
         JSONObject jsonObject = new JSONObject();
         if (user == null) {

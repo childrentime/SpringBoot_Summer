@@ -183,6 +183,12 @@
             <version>RELEASE</version>
             <scope>test</scope>
         </dependency>
+        <!--sha1加密-->
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>1.11</version>
+        </dependency>
     </dependencies>
 
     <build>
